@@ -1,4 +1,18 @@
+:root{
+    --wenge: #62555D;
+    --dark-wenge: #252022;
+    --sage: #BBC7A4;
+    --lapis-lazuli: #005C7A;
+    --main-background: white;
+    --content-background: rgba(0,0,0,0);
+    --content-borders: var(--wenge);
+    --contrast-color: white;
+}
+
 body {
+    color: var(--dark-wenge);
+    font-family: 'SalmaPro', Fallback, sans-serif;
+    background: var(--main-background);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,8 +24,8 @@ body {
 
 body > * {
     text-align: center;
-    width: 100%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 90%;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -24,23 +38,108 @@ body > *:last-child {
     margin-bottom: 5px;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    list-style-type: none;
+body > * > * {
+    text-align: left;
     padding: 5px;
 }
 
-.navbar li{
-    padding: 5px 5px 5px 5px;
+main {
+    border-left: 15px solid var(--content-borders);
+    border-top: 15px solid var(--content-borders);
+    border-top-left-radius:50px;
+    display: flex;
+    flex-direction: row;
 }
 
-.navbar li a, .navbar li a:visited, .navbar li a:hover, .navbar li a:active {
+
+/** ======= ======= ======= ======= ======= ======= ======= ======= ***
+*** Styles for Name/Title/Pic
+*** ======= ======= ======= ======= ======= ======= ======= ======= **/
+.profile {
+    background: var(--content-background);
+    z-index: -1;
+    width: 400px;
+    min-width: 20%;
+}
+.profile > * {
+    padding: 5px;
+}
+.profile > h1 {
+    font-family: 'AppleTea', Fallback, sans-serif;
+    font-size: 28pt;
+    margin-bottom: 5px;
+}
+.profile > h2 {
+    font-family: 'AppleTea', Fallback, sans-serif;
+    font-size: 18pt;
+    margin-top: 0;
+}
+.profile > img {
+    width: 100%;
+    padding: 5px 0 5px 0;
+}
+
+/** ======= ======= ======= ======= ======= ======= ======= ======= ***
+*** Styles for Bio/Skills/Projects
+*** ======= ======= ======= ======= ======= ======= ======= ======= **/
+.info {
+    background: var(--content-background);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.info > article > header {
+    font-size: 18pt;
+}
+.info > article > a[type=project-card]{
     text-decoration: none;
 }
+/** ======= ======= ======= ======= ======= ======= ======= ======= ***
+*** Styles for Github project link cards
+*** ======= ======= ======= ======= ======= ======= ======= ======= **/
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-top: var(--content-borders) solid 3px;
+    border-bottom: var(--content-borders) solid 3px;
+    border-left: var(--content-borders) solid 5px;
+    border-right: var(--content-borders) solid 5px;
+    padding: 10px;
+    margin: 10px 20px 10px 20px;
+    border-radius: 15px;
+    transition: all 750ms cubic-bezier(0.25, 1, 0.25, 1);
+}
+.project-card[position=left], .project-card[position=left] img {
+    float: left;
+}
+.project-card[position=left] img{
+    margin-right: 20px;
+}
+.project-card[position=right], .project-card[position=right] img {
+    float: right;
+}
+.project-card[position=right] img{
+    margin-left: 20px;
+}
+.project-card img {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 150px;
+    width: 150px;
+}
+.project-card:hover{
+    border-left: var(--content-borders) solid 8px;
+    border-right: var(--content-borders) solid 8px;
+}
 
-.container {
-    height: 100%;
+/** ======= ======= ======= ======= ======= ======= ======= ======= ***
+*** Decorative stripe on the back
+*** ======= ======= ======= ======= ======= ======= ======= ======= **/
+.deco-stripe{
+    z-index: -50;
+    border-top: 100vh solid var(--contrast-color);
+	border-right: 40vw solid transparent;
+    position: absolute;
+    left: -80vw;
 }

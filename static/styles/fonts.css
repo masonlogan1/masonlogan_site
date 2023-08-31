@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'AppleTea';
+  src: url('/static/fonts/Apple-Tea.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/Apple-Tea.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/static/fonts/Apple-Tea.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'SalmaPro';
+  src: url('/static/fonts/Salma-pro-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/Salma-pro-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/static/fonts/Salma-pro-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'SalmaProNarrow';
+  src: url('/static/fonts/Salma-pro-Medium-narrow.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/Salma-pro-Medium-narrow.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/static/fonts/Salma-pro-Medium-narrow.ttf')  format('truetype'); /* Safari, Android, iOS */
+}

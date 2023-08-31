@@ -1,8 +1,68 @@
 {% extends "layout.html" %}
-{% block title %} masonlogan.com {% endblock %}
+{% block title %} Mason Logan {% endblock %}
 
 
 {% block content %}
-<p></p>
+<aside class="profile">
+    <h1>Mason Logan</h1>
+    <h2>Full-Stack Developer</h2>
+    <img src="images/profile_photo.jpeg" />
+    <p>contact@masonlogan.com</p>
+</aside>
+<section class="info">
+    <article>
+        <h2>About Me</h2>
+        <p>My name is Mason Logan, I'm a full stack developer with extensive
+        experience using Python to automate testing and database management,
+        API data, job scheduling, and many more purposes. I am knowledgeable
+        in using Oracle, MySql, Postgres, MongoDB, and a number of specialty
+        databases. Additionally, I am familiar with Flask and Django for
+        web development, the ELK stack for devops monitoring, InfluxDB and
+        Grafana for metrics collection and visualization, and have experience
+        using containerization (primarily Docker) for deploying production
+        applications</p>
+        <p>Aside from the tools I use for work, I am interested in working with
+        Linked Data/RDF formats such as JSON-LD and how they can be used to
+        create practical ways to share and distribute data, as well as learning
+        more about containerization and how it can be used to create portable
+        applications that make the lives of users and developers easier</p>
+        <p>I graduated from the University of North Carolina at Asheville in
+        2020 with a degree in Computer Science and currently live in the
+        Raleigh-Durham area in North Carolina</p>
+        <p>Outside of programming, I spend a lot of time reading, hiking, and
+        taking care of an ever-growing collection of houseplants</p>
+    </article>
+    <article>
+        <h2>Projects I've worked on</h2>
+        <a href="https://github.com/masonlogan1/pywebworker" type=project-card>
+            <article class="project-card" position=left>
+                <div>
+                    <img src="/static/images/python-logo.png" />
+                    <h3>PyWebWorker</h3>
+                    <p>Pyodide, an in-browser Python interpreter, lacks support for
+                    multithreading. However, most web browsers provide the WebWorker API
+                    that can be used to run background processes. PyWebWorker seeks to
+                    use the WebWorker API to provide an alternative to the missing
+                    threading library</p>
+                </div>
+            </article>
+        </a>
+        <a href="https://github.com/masonlogan1/tumblr_users_to_rss" type=project-card>
+            <article class="project-card" position=right>
+                <div>
+                    <img src="/static/images/rss_logo.png" />
+                    <h3>Tumblr RSS Feeds</h3>
+                    <p>Tumblr lacks the ability to easily get the rss feeds for
+                    blogs a user follows without extensive use of their API.
+                    This lightweight flask application allows users to save
+                    their follower list as an html document, upload it to the
+                    server, and receive a list of rss urls in csv format to allow
+                    for the use of an RSS reader as a lightweight alternative to
+                    the full site on restrictive hardware</p>
+                </div>
+            </article>
+        </a>
+    </article>
+</section>
 {% endblock %}
 

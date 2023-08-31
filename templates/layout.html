@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
@@ -9,21 +10,9 @@
 </head>
 <body>
 
-<header>
-{% block header %}{% include "common/header.html" %}{% endblock %}
-</header>
-
-<nav>
-{% block nav %}{% include "common/nav.html" %}{% endblock %}
-</nav>
-
-<main class="container">
-    {% block content %}{% endblock %}
+<main>
+{% block content %}{% endblock %}
 </main>
-
-<footer>
-{% block footer %}{% include "common/footer.html" %}{% endblock %}
-</footer>
-
+<div class="deco-stripe"></div>
 </body>
 </html>
