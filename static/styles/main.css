@@ -144,3 +144,37 @@ main {
     position: absolute;
     left: -80vw;
 }
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 0px;
+    }
+
+    body > * {
+        flex-direction: column;
+        width: 90%;
+        max-width: 100%;
+        margin: 0;
+        border: none;
+    }
+
+    body > :first-child {
+        margin-top: 0;
+    }
+
+    .profile {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .profile img {
+        width: 100%;
+    }
+
+    .project-card img {
+        width: 5em;
+        height: 5em;
+    }
+}
